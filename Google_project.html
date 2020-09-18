@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Google</title>
+
+  <style type="text/css"> 
+html {
+    height: 100%;
+    width: 100%;
+}
+
+#navbar {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px ;
+    grid-template-areas: 
+    "sign-in image gmail";
+}
+
+a, p {
+    text-decoration: none;
+    color: rgba(0,0,0,0.86);
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#gmail {
+    grid-area: gmail;
+    justify-self: center;
+    align-self: center;
+}
+#image {
+    grid-area: image;
+    justify-self: center;
+    align-self: center;
+}
+
+#sign-in {
+    grid-area: sign-in;
+    justify-self: center;
+    align-self: center;
+    background-color: #4683ea;
+    height: 30px;
+    width: 65px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #4285f4;
+}
+
+
+
+#main {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 70px 70px 250px;
+    grid-template-areas: 
+    ". logo ."
+    ". search ."
+    ". flexbox ."
+    ". google-text .";
+}
+
+#logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: end;
+}
+#search {
+    grid-area: search;
+    height: 30px;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    border-radius: 30px;
+}
+
+#search:focus {
+    box-shadow: 1px 1px 5px grey;
+}
+#search:hover {
+    box-shadow: 1px 1px 5px grey;
+}
+
+#flexbox {
+    display: flexbox;
+    grid-area: flexbox;
+    justify-self: center;
+    align-self: center;
+}
+#google-search-btn {
+    border: none;
+    font-size: 15px;
+    color: #5F6368;
+    margin-right: 25px;
+    padding: 7px 15px 7px 15px;
+    border-radius: 3px;
+}
+#random-search-btn {
+    border: none;
+    font-size: 15px;
+    color: #5F6368;
+    padding: 7px 15px 7px 15px;
+    border-radius: 3px;
+}
+#google-search-btn:hover {
+    border: 1px solid rgba(0, 0, 0, 0.226);
+}
+#random-search-btn:hover {
+    border: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+#google-text {
+    grid-area: google-text;
+    justify-self: center;
+}
+#français {
+    color: blue;
+}
+
+
+
+#footer {
+    position: center;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 170px 170px 180px 170px 170px 170px 170px 170px;
+    grid-template-rows: 100px;
+    grid-template-areas: 
+    "advertising business about hsw . ci privacy terms settings";
+    background-color: #F2F2F2
+}
+
+#advertising {
+    grid-area: advertising;
+    justify-self: center;
+    align-self: center;
+}
+#business {
+    grid-area: business;
+    justify-self: center;
+    align-self: center;
+}
+#about {
+    grid-area: about;
+    justify-self: center;
+    align-self: center;
+}
+#hsw {
+    grid-area: hsw;
+    justify-self: center;
+    align-self: center;
+}
+
+#ci {
+   grid-area: ci;
+    justify-self: center;
+    align-self: center; 
+}
+#privacy {
+    grid-area: privacy;
+    justify-self: center;
+    align-self: center;
+}
+#terms {
+    grid-area: terms;
+    justify-self: center;
+    align-self: center;
+}
+#settings {
+    grid-area: settings;
+    justify-self: center;
+    align-self: center;
+}
+
+</style>
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="https://www.google.com/intl/fr/gmail/about/" id="gmail">Gmail</a>
+        <a href="https://www.google.com/imghp?hl=FR" id="image">Images</a>
+        <a href="https://myaccount.google.com/intro?hl=fr" id="sign-in">Sign in</a>
+    </div>
+
+
+    <div id="main">
+        <a href="https://fr.wikipedia.org/wiki/Logo_de_Google" id="logo"><img src="logo_google.png"></a>
+        <input type="text" id="search">
+        <div id="flexbox">
+            <button id="google-search-btn">Google Search</button><button id="random-search-btn">I'm Feeling Lucky</button>
+        </div>
+        <p id="google-text">Google offered in: <a href="https://www.google.com/?hl=ja" id="français">Français</a></p>
+    </div>
+
+    <div id="footer">
+        <a href="https://ads.google.com/intl/fr_fr/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" id="advertising">Advertising</a>
+        <a href="https://ads.google.com/intl/fr_fr/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" id="business">Business</a>
+        <a href="https://about.google/?utm_source=google-FR&utm_medium=referral&utm_campaign=hp-footer&fg=1" id="about">About</a>
+        <a href="https://www.google.com/search/howsearchworks/?fg=1" id="hsw">How Search works</a>
+        <a href="https://support.google.com/websearch/answer/7585859?p=fr_consumer_info&hl=fr&fg=1&visit_id=637360363601386033-1623022946&rd=1" id="ci">Consumer Information</a>
+        <a href="https://policies.google.com/privacy?hl=fr&fg=1" id="privacy">Privacy</a>
+        <a href="https://policies.google.com/terms?hl=fr&fg=1" id="terms">Terms</a>
+        <a href="https://www.google.com/preferences?hl=fr" id="settings">Settings</a>
+    </div>
+</body>
+</html>
